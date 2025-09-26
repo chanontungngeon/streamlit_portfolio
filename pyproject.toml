@@ -1,0 +1,30 @@
+# Simple pyproject.toml for dependency management only
+[project]
+name = "thai-dividend-strategy"
+version = "1.0.0"
+description = "Interactive Thai SET High Dividend Strategy with Portfolio Optimization"
+requires-python = ">=3.9"
+
+# Dependencies only - no package building
+dependencies = [
+    "streamlit>=1.28.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "plotly>=5.15.0",
+    "openpyxl>=3.1.0",
+    "xlsxwriter>=3.1.0",
+    "python-dateutil>=2.8.0",
+    "pytz>=2023.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "jupyter>=1.0.0",
+    "ipykernel>=6.25.0",
+]
+
+# Remove build system entirely - this is not a package to be built
+# Just dependency management
